@@ -36,7 +36,9 @@ const searchSong = async (input: string): Promise<SongDetails[]> => {
   const lyric: string = sanitiseInput(input);
   const words = lyric.split(",").map((w) => w.trim());
 
-  const url = new URL("http://localhost:8080/api/songs");
+  const url = new URL(
+    "https://railwaytest-v1-production.up.railway.app/api/songs"
+  );
 
   words.forEach((word) => url.searchParams.append("words", word));
 

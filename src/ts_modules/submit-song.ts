@@ -42,19 +42,22 @@ submitSongForm.addEventListener("submit", async (e) => {
 
   console.log(json);
   try {
-    const response = await fetch("http://localhost:8080/api/songs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        artists: artists,
-        releaseYear: releaseYear,
-        genres: genres,
-        lyrics: lyrics,
-      }),
-    });
+    const response = await fetch(
+      "https://railwaytest-v1-production.up.railway.app/api/songs",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          artists: artists,
+          releaseYear: releaseYear,
+          genres: genres,
+          lyrics: lyrics,
+        }),
+      }
+    );
     if (response.ok) {
       /*200*/ displayMessageOnSubmit(
         form,
