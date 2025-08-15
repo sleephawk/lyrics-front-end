@@ -1,5 +1,8 @@
 @use "scss_modules/palette.scss";
-@use "scss_modules/devices.scss" /*==========GENERAL RULES==========*/: root {
+@use "scss_modules/devices.scss";
+
+/*==========GENERAL RULES==========*/
+:root {
   font-family: "Outfit", sans-serif;
   color: palette.$savoy-blue;
   color: palette.$whimillion;
@@ -59,6 +62,9 @@ button:hover {
   display: flex;
   justify-self: center;
   justify-content: center;
+  @include devices.phone {
+    max-width: 80%;
+  }
   &--heading {
     transition: transform 0.5s linear;
   }
