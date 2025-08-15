@@ -130,7 +130,7 @@ button:hover {
     max-width: 80%;
     justify-self: center;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: px;
     &__error-message {
       opacity: 0;
       transition: opacity 1s linear;
@@ -141,5 +141,6 @@ button:hover {
     flex-direction: column;
     justify-self: center;
     text-align: center;
+    margin-bottom: 100px;
   }
 }
