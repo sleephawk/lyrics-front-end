@@ -1,0 +1,132 @@
+@use "scss_modules/palette.scss";
+
+/*==========GENERAL RULES==========*/
+
+:root {
+  font-family: "Outfit", sans-serif;
+  color: palette.$savoy-blue;
+  color: palette.$whimillion;
+  background: linear-gradient(palette.$raisin-black, palette.$delft-blue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  justify-content: center;
+}
+
+a {
+  font-weight: 500;
+  color: palette.$violet;
+  text-decoration: inherit;
+}
+a:hover {
+  color: palette.$whimillion;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  position: relative;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+button {
+  background-color: palette.$raisin-black;
+  color: palette.$violet;
+  border: none;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+button:hover {
+  border: solid 1px palette.$vermilion;
+}
+
+/*==========MAIN RULES==========*/
+
+//HOME
+
+.search-container {
+  flex-direction: column;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  &--heading {
+    transition: transform 0.5s linear;
+  }
+  &--form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    &__button:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.display-area {
+  opacity: 0;
+  max-width: 60%;
+  justify-self: center;
+  text-align: center;
+
+  border-radius: 40px;
+  margin-top: 30px;
+  padding: 10px;
+  &--quick-message {
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+  &--text {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+
+    &__card {
+      background-color: palette.$vermilion;
+      // background: linear-gradient(palette.$vermilion, palette.$violet);
+      border-radius: 10px;
+      align-items: center;
+      padding: 20px;
+      width: 400px;
+      border: solid 5px palette.$vermilion;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+    }
+    &__card:hover {
+      cursor: pointer;
+      border: solid 5px palette.$savoy-blue;
+    }
+  }
+}
+
+//SUBMIT
+
+.submit-page {
+  &--heading-container {
+    max-width: 80%;
+    justify-self: center;
+    text-align: center;
+    &__error-message {
+      opacity: 0;
+      transition: opacity 1s linear;
+    }
+  }
+  &--form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+  }
+}

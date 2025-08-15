@@ -1,1 +1,2 @@
-# lyrics-front-end
+-[] Create button and link submit event listener to search lyrics
+-[] Create an output area for the returned song (handle the data received)

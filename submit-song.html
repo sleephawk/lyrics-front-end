@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Math&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Rouge+Script&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Submit Song</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="game.html">Lyric Game</a>
+        <span>|</span>
+        <a href="#">Submit A Song</a>
+      </nav>
+    </header>
+    <main class="submit-page">
+      <div class="submit-page--heading-container">
+        <h1 class="submit-page--heading-container__heading">
+          We're a small team, help us fill up our database!
+        </h1>
+        <p class="submit-page--heading-container__message">
+          <em>Please comma separate artists and genres</em>
+        </p>
+        <p
+          id="error-message"
+          class="submit-page--heading-container__error-message"
+        ></p>
+      </div>
+      <form id="submit-song-form" class="submit-page--form">
+        <label for="name">Song name:</label><br />
+        <input
+          id="name"
+          name="name"
+          maxlength="50"
+          placeholder="Yellow Submarine"
+          required
+        /><br />
+        <label for="artistNames">Artist(s):</label><br />
+        <input
+          id="artistNames"
+          name="artistNames"
+          maxlength="50"
+          placeholder="Beatles"
+        /><br />
+        <label for="releaseYear">Release Year:</label><br />
+        <input
+          id="releaseYear"
+          name="releaseYear"
+          placeholder="1966"
+          type="number"
+          maxlength="4"
+          required
+        /><br />
+        <label for="genreNames">Genre(s):</label><br />
+        <input
+          id="genreNames"
+          name="genreNames"
+          maxlength="50"
+          placeholder="Brit-pop, pop"
+          required
+        /><br />
+        <label for="lyrics">Lyrics:</label><br />
+        <textarea
+          placeholder="Please enter full lyrics! We appreciate your diligence and help 🤓"
+          id="lyrics"
+          name="lyrics"
+          rows="25"
+          cols="33"
+          maxlength="1000"
+          required
+        ></textarea
+        ><br />
+        <button id="submit-song-button" type="submit">Submit</button>
+      </form>
+    </main>
+    <script type="module" src="/src/ts_modules/submit-song.ts"></script>
+  </body>
+</html>
