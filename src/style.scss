@@ -37,6 +37,9 @@ nav {
   max-width: 100%;
   padding-left: 20px;
   padding-top: 10px;
+  @include devices.phone {
+    font-size: 0.8rem;
+  }
 }
 
 button {
@@ -81,6 +84,9 @@ button:hover {
   border-radius: 40px;
   margin-top: 30px;
   padding: 10px;
+  @include devices.phone {
+    max-width: 80%;
+  }
   &--quick-message {
     opacity: 0;
     transition: opacity 0.2s linear;
