@@ -1,8 +1,5 @@
 @use "scss_modules/palette.scss";
-
-/*==========GENERAL RULES==========*/
-
-:root {
+@use "scss_modules/devices.scss" /*==========GENERAL RULES==========*/: root {
   font-family: "Outfit", sans-serif;
   color: palette.$savoy-blue;
   color: palette.$whimillion;
@@ -109,6 +106,9 @@ button:hover {
       border: solid 5px palette.$vermilion;
       opacity: 0;
       transition: opacity 0.2s linear;
+      @include devices.phone {
+        max-width: 90%;
+      }
     }
     &__card:hover {
       cursor: pointer;
