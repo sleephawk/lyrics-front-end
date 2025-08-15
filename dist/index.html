@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/lyrics-full-stack/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Math&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Rouge+Script&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Search Song By Lyric</title>
+    <script type="module" crossorigin src="/lyrics-full-stack/assets/index-BeLfcv6c.js"></script>
+    <link rel="modulepreload" crossorigin href="/lyrics-full-stack/assets/utils-DuDkgmWv.js">
+    <link rel="stylesheet" crossorigin href="/lyrics-full-stack/assets/utils-CSIa8U7E.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <span>|</span>
+        <a href="game.html">Lyric Game</a>
+        <span>|</span>
+        <a href="submit-song.html">Submit A Song</a>
+      </nav>
+    </header>
+    <main>
+      <div id="search-container" class="search-container">
+        <h1 class="search-container--heading">FIND A SONG BY LYRIC</h1>
+        <p><em>Please comma separate your queries and use whole words</em></p>
+        <form class="search-container--form" action="#">
+          <textarea
+            class="search-container--form__input"
+            id="input-field"
+            name="input-field"
+            rows="5"
+            cols="33"
+          >
+Today is gonna be the day that they're gonna throw it back to you, fire in your heart</textarea
+          >
+          <br />
+          <button
+            id="searchLyricSubmit"
+            class="search-container--form__button"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="display-area">
+        <p class="display-area--quick-message">We found...</p>
+        <p id="display-response" class="display-area--text"></p>
+      </div>
+    </main>
+  </body>
+</html>

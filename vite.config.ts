@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/lyrics-full-stack/",
+  base: "/lyrics-front-end/",
   build: {
     rollupOptions: {
       input: {
