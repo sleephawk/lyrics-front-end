@@ -75,14 +75,3 @@ submitSongForm.addEventListener("submit", async (e) => {
     console.log("You're not connected properly yet - check your API.");
   }
 });
-
-// {
-//   "name": "Bohemian Rhapsody",
-//   "lyrics": "Is this the real life? Is this just fantasy?...",
-//   "releaseYear": 1975,
-//   "authorNames": ["Freddie Mercury", "Queen"],
-//   "genreNames": ["Rock", "Progressive Rock"]
-// }
-
-// fix messages that appear to confirm found/not found/ record added
-//fix spaces in the rock genres
