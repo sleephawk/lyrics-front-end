@@ -73,7 +73,7 @@ searchLyricSubmit.addEventListener("click", async (e) => {
     }
 
     song.forEach(async (s, i) => {
-      const formattedLyrics = s.lyrics.replace(/\\n/g, "\n");
+      const formattedLyrics = s.lyrics.replace(/\n/g, "<br>");
 
       let card = document.createElement("p");
       card.classList.add("display-area--text__card");
