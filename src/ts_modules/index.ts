@@ -91,7 +91,7 @@ searchLyricSubmit.addEventListener("click", async (e) => {
           link.textContent = "Find on Youtube";
 
           const genreNames = s.genres.map((g) => g.name).join(", ");
-          card.innerHTML = `▶ ${artistNames}:<br> ${s.name}<br>
+          card.innerHTML = `▼ ${artistNames}:<br> ${s.name}<br>
             Release Year: ${s.releaseYear}<br><br>
             Genre(s): ${genreNames}<br><br>
             Lyrics:<br> ${s.lyrics}<br><br>
