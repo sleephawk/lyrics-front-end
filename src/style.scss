@@ -76,6 +76,12 @@ button:hover {
     &__button:hover {
       cursor: pointer;
     }
+    &__input {
+      padding: 5px;
+      border-radius: 5px;
+      background-color: palette.$whimillion;
+      color: palette.$raisin-black;
+    }
   }
 }
 
@@ -143,5 +149,11 @@ button:hover {
     justify-self: center;
     text-align: center;
     margin-bottom: 100px;
+    &__field {
+      padding: 5px;
+      border-radius: 5px;
+      background-color: palette.$raisin-black;
+      color: palette.$whimillion;
+    }
   }
 }
