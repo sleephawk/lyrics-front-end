@@ -51,9 +51,9 @@ submitSongForm.addEventListener("submit", async (e) => {
         },
         body: JSON.stringify({
           name: name,
-          artists: artists,
+          artistNames: artists,
           releaseYear: releaseYear,
-          genres: genres,
+          genreNames: genres,
           lyrics: lyrics,
         }),
       }
