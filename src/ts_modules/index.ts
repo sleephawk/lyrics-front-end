@@ -60,6 +60,7 @@ searchLyricSubmit.addEventListener("click", async (e) => {
 
   try {
     const song = await searchSong(lyricForm.value);
+
     if (song.length <= 0) {
       quickMessage.textContent =
         "We found...nothing this time! Try something new.";
@@ -70,9 +71,10 @@ searchLyricSubmit.addEventListener("click", async (e) => {
       quickMessage.style.opacity = "0";
       return;
     }
-    console.log(song);
 
     song.forEach(async (s, i) => {
+      const formattedLyrics = s.lyrics.replace(/\\n/g, "\n");
+
       let card = document.createElement("p");
       card.classList.add("display-area--text__card");
       const artistNames = s.artists.map((a) => a.name).join(", ");
@@ -94,7 +96,7 @@ searchLyricSubmit.addEventListener("click", async (e) => {
           card.innerHTML = `▼ ${artistNames}:<br> ${s.name}<br>
             Release Year: ${s.releaseYear}<br><br>
             Genre(s): ${genreNames}<br><br>
-            Lyrics:<br> ${s.lyrics}<br><br>
+            Lyrics:<br> ${formattedLyrics}<br><br>
             `;
           card.appendChild(link);
           cardExpand = true;
