@@ -1,7 +1,7 @@
 export const sanitiseInput = (input: string): string => {
   return input
     .trim()
-    .replace(/\s+/g, " ")
+    .replace(/ +/g, " ")
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");

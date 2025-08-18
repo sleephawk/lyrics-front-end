@@ -81,8 +81,10 @@ searchLyricSubmit.addEventListener("click", async (e) => {
       card.innerHTML = `▶ ${artistNames}:<br> ${s.name} `;
       let cardExpand = false;
       responseDisplay.appendChild(card);
+
       await sleep((i + 1) * 200);
       card.style.opacity = "1";
+
       card.addEventListener("click", () => {
         const youtube: string = `https://www.youtube.com/results?search_query=${s.name}+${artistNames}`;
 
